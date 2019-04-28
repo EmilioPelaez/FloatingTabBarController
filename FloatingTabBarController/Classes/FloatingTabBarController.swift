@@ -23,11 +23,13 @@ open class FloatingTabBarController: UIViewController {
 			}
 			oldValue.forEach {
 				$0.removeFromParentViewController()
+				if $0.floatingTabBarController == self { $0.floatingTabBarController = nil }
 			}
 			
 			viewControllers.forEach {
 				$0.loadViewIfNeeded()
 				addChildViewController($0)
+				$0.floatingTabBarController = self
 			}
 			
 			tabBar.items = viewControllers.map { $0.floatingTabItem ?? .empty }
@@ -60,6 +62,12 @@ open class FloatingTabBarController: UIViewController {
 	
 	var collectionViewLayout: UICollectionViewLayout {
 		return collectionView.collectionViewLayout
+	}
+	
+	deinit {
+		viewControllers.forEach {
+			if $0.floatingTabBarController == self { $0.floatingTabBarController = nil }
+		}
 	}
 	
 	open override func viewDidLoad() {
