@@ -1,16 +1,24 @@
 PODS:
-  - FloatingTabBarController (0.1.0)
+  - CGMath (1.0.0)
+  - FloatingTabBarController (0.1.0):
+    - CGMath
 
 DEPENDENCIES:
+  - CGMath
   - FloatingTabBarController (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CGMath
 
 EXTERNAL SOURCES:
   FloatingTabBarController:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FloatingTabBarController: ccbd79474c67513d8942f889629d1692cca7e8bf
+  CGMath: d5af22e2e41028d42b9b9714f279a45a7c2bfe00
+  FloatingTabBarController: 50870f8840bae01de0c05d2eaa7da8107ff449c4
 
-PODFILE CHECKSUM: 9bb12f27f84057edb644c1f95bd81dc6578714af
+PODFILE CHECKSUM: 089cbf3e857deadb509075acdbc6ed5da820f90d
 
 COCOAPODS: 1.6.1

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D82F66932B7920A6E5ABF908E1F6DC68"
+               BlueprintIdentifier = "2B85040B5070A7D6B1DB7930A5B17D96"
                BuildableName = "FloatingTabBarController.framework"
                BlueprintName = "FloatingTabBarController"
                ReferencedContainer = "container:Pods.xcodeproj">

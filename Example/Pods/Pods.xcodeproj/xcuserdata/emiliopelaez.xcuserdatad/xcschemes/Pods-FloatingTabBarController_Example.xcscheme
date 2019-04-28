@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1EEE713D5813C9C24990DE71DF383993"
+               BlueprintIdentifier = "9C322AD8CEC19B40F104884A76B356D8"
                BuildableName = "Pods_FloatingTabBarController_Example.framework"
                BlueprintName = "Pods-FloatingTabBarController_Example"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1EEE713D5813C9C24990DE71DF383993"
+            BlueprintIdentifier = "9C322AD8CEC19B40F104884A76B356D8"
             BuildableName = "Pods_FloatingTabBarController_Example.framework"
             BlueprintName = "Pods-FloatingTabBarController_Example"
             ReferencedContainer = "container:Pods.xcodeproj">

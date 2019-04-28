@@ -1,8 +1,9 @@
 use_frameworks!
+platform :ios, '11.0'
 
 target 'FloatingTabBarController_Example' do
   pod 'FloatingTabBarController', :path => '../'
-
+  pod 'CGMath'
   target 'FloatingTabBarController_Tests' do
     inherit! :search_paths
 
