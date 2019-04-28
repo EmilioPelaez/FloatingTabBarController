@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'FloatingTabBarController_Example' do
+  pod 'FloatingTabBarController', :path => '../'
+
+  target 'FloatingTabBarController_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

@@ -1,0 +1,16 @@
+PODS:
+  - FloatingTabBarController (0.1.0)
+
+DEPENDENCIES:
+  - FloatingTabBarController (from `../`)
+
+EXTERNAL SOURCES:
+  FloatingTabBarController:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FloatingTabBarController: ccbd79474c67513d8942f889629d1692cca7e8bf
+
+PODFILE CHECKSUM: 9bb12f27f84057edb644c1f95bd81dc6578714af
+
+COCOAPODS: 1.6.1

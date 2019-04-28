@@ -1,0 +1,22 @@
+{
+  "name": "FloatingTabBarController",
+  "version": "0.1.0",
+  "summary": "A short description of FloatingTabBarController.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/EmilioPelaez/FloatingTabBarController",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "EmilioPelaez": "me@epelaez.net"
+  },
+  "source": {
+    "git": "https://github.com/EmilioPelaez/FloatingTabBarController.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "FloatingTabBarController/Classes/**/*"
+}
