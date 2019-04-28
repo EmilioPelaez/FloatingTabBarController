@@ -24,15 +24,17 @@ open class FloatingTabBarController: UIViewController {
 			oldValue.forEach {
 				$0.removeFromParentViewController()
 				if $0.floatingTabBarController == self { $0.floatingTabBarController = nil }
+				stopObserving($0)
 			}
 			
 			viewControllers.forEach {
 				$0.loadViewIfNeeded()
 				addChildViewController($0)
 				$0.floatingTabBarController = self
+				observe($0)
 			}
 			
-			tabBar.items = viewControllers.map { $0.floatingTabItem ?? .empty }
+			updateTabBar()
 			collectionView.reloadData()
 			updateBarItems(animated: false)
 		}
@@ -63,6 +65,8 @@ open class FloatingTabBarController: UIViewController {
 	var collectionViewLayout: UICollectionViewLayout {
 		return collectionView.collectionViewLayout
 	}
+	
+	var observers: [UIViewController: NSKeyValueObservation] = [:]
 	
 	deinit {
 		viewControllers.forEach {
@@ -178,6 +182,10 @@ open class FloatingTabBarController: UIViewController {
 		}
 	}
 	
+	public func updateTabBar() {
+		tabBar.items = viewControllers.map { $0.floatingTabItem ?? .empty }
+	}
+	
 	open func scrollToViewController(_ viewController: UIViewController, animated: Bool) {
 		if let index = viewControllers.index(of: viewController) {
 			scrollToViewControllerAtIndex(index, animated: animated)
@@ -237,4 +245,16 @@ extension FloatingTabBarController: FloatingTabBarDelegate {
 	open func floatingTabBarDidSelect(item: FloatingTabItem, index: Int) {
 		scrollToViewControllerAtIndex(index, animated: true)
 	}
+}
+
+extension FloatingTabBarController {
+	
+	func observe(_ controller: UIViewController) {
+		observers[controller] = controller.observe(\.floatingTabItem) { [weak self] _, _ in self?.updateTabBar() }
+	}
+	
+	func stopObserving(_ controller: UIViewController) {
+		observers[controller] = nil
+	}
+	
 }

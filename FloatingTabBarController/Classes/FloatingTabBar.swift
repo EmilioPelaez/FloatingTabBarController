@@ -66,6 +66,7 @@ open class FloatingTabBar: UIView {
 				blurView.contentView.addSubview($0.selected)
 				blurView.contentView.addSubview($0.deselected)
 			}
+			setNeedsLayout()
 		}
 	}
 	
