@@ -22,7 +22,7 @@ open class FloatingTabBar: UIView {
 	
 	open var items: [FloatingTabItem] = [] {
 		didSet {
-			imageViews = items.map { (UIImageView(image: $0.selectedImage), UIImageView(image: $0.deselectedImage)) }
+			imageViews = items.map { (UIImageView(image: $0.selectedImage), UIImageView(image: $0.normalImage)) }
 		}
 	}
 	

@@ -14,16 +14,16 @@ open class FloatingTabItem: NSObject {
 	// Recommended size 35x35pt
 	public let selectedImage: UIImage
 	// Recommended size 25x25pt
-	public let deselectedImage: UIImage
+	public let normalImage: UIImage
 	
-	public init(selectedImage: UIImage, deselectedImage: UIImage) {
+	public init(selectedImage: UIImage, normalImage: UIImage) {
 		self.selectedImage = selectedImage
-		self.deselectedImage = deselectedImage
+		self.normalImage = normalImage
 	}
 	
 	public init(image: UIImage) {
 		self.selectedImage = image
-		self.deselectedImage = image
+		self.normalImage = image
 	}
 	
 }

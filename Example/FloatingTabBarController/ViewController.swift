@@ -18,11 +18,11 @@ class ViewController: FloatingTabBarController {
 		
 		viewControllers = (1...3).map { "Tab\($0)" }.map {
 			let selected = UIImage(named: $0 + "_Large")!
-			let deselected = UIImage(named: $0 + "_Small")!
+			let normal = UIImage(named: $0 + "_Small")!
 			let controller = storyboard!.instantiateViewController(withIdentifier: $0)
 			controller.title = $0
 			controller.view.backgroundColor = UIColor(named: $0)
-			controller.floatingTabItem = FloatingTabItem(selectedImage: selected, deselectedImage: deselected)
+			controller.floatingTabItem = FloatingTabItem(selectedImage: selected, normalImage: normal)
 			return controller
 		}
 		
