@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SlidingTabBarController
+import FloatingTabBarController
 
 class ViewController: FloatingTabBarController {
 	
