@@ -25,9 +25,9 @@ pod 'FloatingTabBarController'
 
 ## Usage
 
-To use, create a new instance of `FloatingTabBarController` and set the `viewControllers` property. The tab bar will be populated using the `floatingTabItem` property of `UIViewController`, which you should populate.
+Create a new instance of `FloatingTabBarController` and set the `viewControllers` property. The tab bar will be populated using the `floatingTabItem` property of `UIViewController`, which you should set.
 
-You can create a `FloatingTabItem` with one or two images, it is recommended that selected images are slightly larger (35x35px) than normal images (25x25pt). When initialized with a single image, that image will be used for both states.
+You can create a `FloatingTabItem` with one or two images, it is recommended that selected images are slightly larger (35x35pt) than normal images (25x25pt). When initialized with a single image, that image will be used for both states.
 
 You can customize the tab bar's background color and visual effect, as well as its tint color, which will reflect on the color of the icons if the images are set to render as template.
 
