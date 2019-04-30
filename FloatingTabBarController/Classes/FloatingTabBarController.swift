@@ -22,14 +22,14 @@ open class FloatingTabBarController: UIViewController {
 				print("WARNING: Using more than five pages is not recommended")
 			}
 			oldValue.forEach {
-				$0.removeFromParentViewController()
+				$0.removeFromParent()
 				if $0.floatingTabBarController == self { $0.floatingTabBarController = nil }
 				stopObserving($0)
 			}
 			
 			viewControllers.forEach {
 				$0.loadViewIfNeeded()
-				addChildViewController($0)
+				addChild($0)
 				$0.floatingTabBarController = self
 				observe($0)
 			}
@@ -187,7 +187,7 @@ open class FloatingTabBarController: UIViewController {
 	}
 	
 	open func scrollToViewController(_ viewController: UIViewController, animated: Bool) {
-		if let index = viewControllers.index(of: viewController) {
+		if let index = viewControllers.firstIndex(of: viewController) {
 			scrollToViewControllerAtIndex(index, animated: animated)
 		}
 	}
