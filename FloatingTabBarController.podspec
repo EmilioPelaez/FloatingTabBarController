@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
                        DESC
 
   s.homepage         = 'https://github.com/EmilioPelaez/FloatingTabBarController'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.screenshots      = 'https://raw.githubusercontent.com/EmilioPelaez/FloatingTabBarController/master/Images/Screenshot.png?token=AABCHSSYY56JV57Z7ZNUWOK42EABQ'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'EmilioPelaez' => 'me@epelaez.net' }
   s.source           = { :git => 'https://github.com/EmilioPelaez/FloatingTabBarController.git', :tag => s.version.to_s }

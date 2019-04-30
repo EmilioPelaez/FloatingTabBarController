@@ -4,6 +4,8 @@
 [![License](https://img.shields.io/cocoapods/l/FloatingTabBarController.svg?style=flat)](https://cocoapods.org/pods/FloatingTabBarController)
 [![Platform](https://img.shields.io/cocoapods/p/FloatingTabBarController.svg?style=flat)](https://cocoapods.org/pods/FloatingTabBarController)
 
+![Screenshot](Images/Gif.gif)
+
 `FloatingTabBarController` is a tab bar controller with sliding tabs and a custom tab bar inspired by [this Dribbble shot](https://dribbble.com/shots/4844696-Tab-bar-interaction-with-animated-icons).
 
 ## Example
