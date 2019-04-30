@@ -75,9 +75,9 @@
 		014B017FDDBEDA82C245EA0DEDB3AEBC /* CGMath-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CGMath-Info.plist"; sourceTree = "<group>"; };
 		015DDA2C27F62B9C28D9B1B1F1BC63E7 /* Pods-FloatingTabBarController_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FloatingTabBarController_Example.modulemap"; sourceTree = "<group>"; };
 		019EB19B2B29FFC7A3694C59DE77E839 /* Pods-FloatingTabBarController_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FloatingTabBarController_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0732D0225E9E10A51596CE9232808072 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		0732D0225E9E10A51596CE9232808072 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		09E4DCCE14BCACE499E0865E25351332 /* Pods-FloatingTabBarController_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FloatingTabBarController_Tests-dummy.m"; sourceTree = "<group>"; };
-		0BB7DC9563D56CD66ABC0844E15054A1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		0BB7DC9563D56CD66ABC0844E15054A1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		179D85F89B1392B9AFE8F2FFB5685808 /* UIEdgeInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIEdgeInsets.swift; path = CGMath/Classes/UIEdgeInsets.swift; sourceTree = "<group>"; };
 		19E1CEFA99614AEB3A6921689BAF88C8 /* FloatingPoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingPoint.swift; path = CGMath/Classes/FloatingPoint.swift; sourceTree = "<group>"; };
 		1B210F49451A96ACFBDFDF57A3F87741 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -85,16 +85,16 @@
 		2BB6D03C02012D7E033E2ACC3F3D3E85 /* FloatingTabBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingTabBar.swift; path = FloatingTabBarController/Classes/FloatingTabBar.swift; sourceTree = "<group>"; };
 		2E94571CD74519C59922207EDBBC23ED /* CGVector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGVector.swift; path = CGMath/Classes/CGVector.swift; sourceTree = "<group>"; };
 		3322656BD90F2F479582C29D89FCB9C5 /* CGMath.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CGMath.xcconfig; sourceTree = "<group>"; };
-		37B02ED18F8A12BF570C3EA2010BBFD0 /* Pods_FloatingTabBarController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FloatingTabBarController_Example.framework; path = "Pods-FloatingTabBarController_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		37B02ED18F8A12BF570C3EA2010BBFD0 /* Pods_FloatingTabBarController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FloatingTabBarController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D474E66FC97DBADE6F3B975DB2B1AF5 /* Pods-FloatingTabBarController_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FloatingTabBarController_Example-umbrella.h"; sourceTree = "<group>"; };
 		44985C53DA5B04D2320E8E704EE62074 /* FloatingTabBarController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FloatingTabBarController-prefix.pch"; sourceTree = "<group>"; };
-		44B5724A60554C33AD6A324FD2ADC674 /* FloatingTabBarController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = FloatingTabBarController.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		44B5724A60554C33AD6A324FD2ADC674 /* FloatingTabBarController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = FloatingTabBarController.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		44ED4A313B241A00B74AE3018AEAD0E1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		461718F0E15A7F4C40005E0CDF68A006 /* FloatingTabBarController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FloatingTabBarController-Info.plist"; sourceTree = "<group>"; };
 		46721BBF86C95885FDF0CD306EECCEFF /* Pods-FloatingTabBarController_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FloatingTabBarController_Example-Info.plist"; sourceTree = "<group>"; };
 		4929A0EB072826999B683A99A601A754 /* CGMath-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CGMath-prefix.pch"; sourceTree = "<group>"; };
 		4C98B3A9D11E0F9371D2BB8F34A3CB70 /* FloatingTabBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingTabBarController.swift; path = FloatingTabBarController/Classes/FloatingTabBarController.swift; sourceTree = "<group>"; };
-		4ECC4521479B40302AD74480E3495F73 /* FloatingTabBarController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FloatingTabBarController.framework; path = FloatingTabBarController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4ECC4521479B40302AD74480E3495F73 /* FloatingTabBarController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FloatingTabBarController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52FBF31243ABF31CF8C86FA19469B644 /* Pods-FloatingTabBarController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FloatingTabBarController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		55FC109E8A7FC10CEF6C1BFB42E1B5EE /* CGMath.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CGMath.modulemap; sourceTree = "<group>"; };
 		5B2D6494DA35749B4F57F19C5ECC22FF /* Pods-FloatingTabBarController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FloatingTabBarController_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 		6193D0E7A16ED46BF260C24025929BB4 /* UIGeometry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIGeometry.swift; path = CGMath/Classes/UIGeometry.swift; sourceTree = "<group>"; };
 		619A8B8F472F6FBB6F9DE7D58357F419 /* CGRect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGRect.swift; path = CGMath/Classes/CGRect.swift; sourceTree = "<group>"; };
 		634A1F31CB62B5D823AB3514D87689B3 /* Pods-FloatingTabBarController_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FloatingTabBarController_Tests.modulemap"; sourceTree = "<group>"; };
-		6657F236BC9838977ABBD8B53D292257 /* CGMath.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CGMath.framework; path = CGMath.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6657F236BC9838977ABBD8B53D292257 /* CGMath.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CGMath.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71756AB5E75C9B6E41D2718D40DE173E /* Pods-FloatingTabBarController_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FloatingTabBarController_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		7690A6122E3FEFE4A717496D4DCFE085 /* Pods-FloatingTabBarController_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FloatingTabBarController_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		7810534901DA661622FE6FEAD2A38533 /* UIOffset.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIOffset.swift; path = CGMath/Classes/UIOffset.swift; sourceTree = "<group>"; };
@@ -111,8 +111,8 @@
 		94FBF40F69006CC8B97929E6ABD0B3B6 /* Pods-FloatingTabBarController_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FloatingTabBarController_Tests-Info.plist"; sourceTree = "<group>"; };
 		99B25F0BE9B521FCECEC89BDA34BFB22 /* Comparable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Comparable.swift; path = CGMath/Classes/Comparable.swift; sourceTree = "<group>"; };
 		99F8DEB8CD67E11A5E33134ACEF8EAD0 /* CGSize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGSize.swift; path = CGMath/Classes/CGSize.swift; sourceTree = "<group>"; };
-		9B24D1864700F2FF2036E0D3C5ABB317 /* Pods_FloatingTabBarController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FloatingTabBarController_Tests.framework; path = "Pods-FloatingTabBarController_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9B24D1864700F2FF2036E0D3C5ABB317 /* Pods_FloatingTabBarController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FloatingTabBarController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DF1959EE5221D4B1B1A1E34FAA7789B /* CGPoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGPoint.swift; path = CGMath/Classes/CGPoint.swift; sourceTree = "<group>"; };
 		A07B88014FF5F0F57CB460BF90CE379E /* UIView+MaskPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+MaskPath.swift"; path = "FloatingTabBarController/Classes/UIView+MaskPath.swift"; sourceTree = "<group>"; };
 		A0D389439D2ED9A771FDB8F97378E144 /* Pods-FloatingTabBarController_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FloatingTabBarController_Example-frameworks.sh"; sourceTree = "<group>"; };
@@ -185,7 +185,6 @@
 				7810534901DA661622FE6FEAD2A38533 /* UIOffset.swift */,
 				784B4627A397F369D97AAD458100EFB4 /* Support Files */,
 			);
-			name = CGMath;
 			path = CGMath;
 			sourceTree = "<group>";
 		};
@@ -463,14 +462,15 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = 54932F780EF9A788B140EA3015D0ACD1 /* Products */;
@@ -600,7 +600,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3322656BD90F2F479582C29D89FCB9C5 /* CGMath.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -633,7 +632,6 @@
 			baseConfigurationReference = 5B2D6494DA35749B4F57F19C5ECC22FF /* Pods-FloatingTabBarController_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -667,7 +665,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D5689401CA0E23110A0881DD120B1E82 /* FloatingTabBarController.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -701,6 +698,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -750,8 +748,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -761,6 +758,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -826,7 +824,6 @@
 			baseConfigurationReference = 52FBF31243ABF31CF8C86FA19469B644 /* Pods-FloatingTabBarController_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -862,7 +859,6 @@
 			baseConfigurationReference = E4955625EDA6EF3132CF868AD52C43D6 /* Pods-FloatingTabBarController_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -896,7 +892,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D5689401CA0E23110A0881DD120B1E82 /* FloatingTabBarController.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -930,7 +925,6 @@
 			baseConfigurationReference = BE4649C9AC68BEB772906CC771B592CB /* Pods-FloatingTabBarController_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -965,7 +959,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3322656BD90F2F479582C29D89FCB9C5 /* CGMath.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
