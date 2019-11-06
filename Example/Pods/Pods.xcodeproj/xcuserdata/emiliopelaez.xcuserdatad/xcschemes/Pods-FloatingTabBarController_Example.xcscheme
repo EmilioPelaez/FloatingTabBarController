@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1120"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9C322AD8CEC19B40F104884A76B356D8"
+               BlueprintIdentifier = "88CC35515482AD940EA52C05869098F6"
                BuildableName = "Pods_FloatingTabBarController_Example.framework"
                BlueprintName = "Pods-FloatingTabBarController_Example"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -40,15 +40,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9C322AD8CEC19B40F104884A76B356D8"
-            BuildableName = "Pods_FloatingTabBarController_Example.framework"
-            BlueprintName = "Pods-FloatingTabBarController_Example"
-            ReferencedContainer = "container:Pods.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

@@ -288,16 +288,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-FloatingTabBarController_Example/Pods-FloatingTabBarController_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CGMath/CGMath.framework",
 				"${BUILT_PRODUCTS_DIR}/FloatingTabBarController/FloatingTabBarController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CGMath.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FloatingTabBarController.framework",

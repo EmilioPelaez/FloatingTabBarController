@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/EmilioPelaez'
 
   s.ios.deployment_target = '11.0'
-  s.source_files = 'FloatingTabBarController/Classes/**/*'
+  s.source_files = 'Sources/**/*.swift'
   s.swift_version = '5.0'
   s.dependency 'CGMath'
 end
