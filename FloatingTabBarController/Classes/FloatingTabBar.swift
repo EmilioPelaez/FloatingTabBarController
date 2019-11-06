@@ -70,7 +70,13 @@ open class FloatingTabBar: UIView {
 		}
 	}
 	
-	private let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+	private let blurView: UIVisualEffectView = {
+		if #available(iOS 13.0, *) {
+			return UIVisualEffectView(effect: UIBlurEffect(style: .systemUltraThinMaterial))
+		} else {
+			return UIVisualEffectView(effect: UIBlurEffect(style: .light))
+		}
+	}()
 	
 	public override init(frame: CGRect) {
 		super.init(frame: frame)
