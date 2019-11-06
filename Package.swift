@@ -10,7 +10,10 @@ let package = Package(
 	products: [
 		.library(name: "FloatingTabBarController", targets: ["FloatingTabBarController"])
 	],
+	dependencies: [
+			.package(url: "https://EmilioPelaez@github.com/EmilioPelaez/CGMath.git", from: "1.0.0"),
+	],
 	targets: [
-		.target(name: "FloatingTabBarController")
+		.target(name: "FloatingTabBarController", dependencies: ["CGMath"])
 	]
 )
