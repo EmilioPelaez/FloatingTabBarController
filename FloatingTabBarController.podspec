@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FloatingTabBarController'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'FloatingTabBarController is a tab bar controller with sliding tabs and a custom tab bar.'
 
 # This description is used to generate tags and improve search results.
