@@ -11,7 +11,6 @@ let package = Package(
 		.library(name: "FloatingTabBarController", targets: ["FloatingTabBarController"])
 	],
 	targets: [
-		.target(name: "FloatingTabBarController"),
-		.testTarget(name: "FloatingTabBarController", dependencies: ["FloatingTabBarController"])
+		.target(name: "FloatingTabBarController")
 	]
 )
