@@ -22,20 +22,18 @@ open class FloatingTabBarController: UIViewController {
 				print("WARNING: Using more than five pages is not recommended")
 			}
 			oldValue.forEach {
-				$0.removeFromParent()
 				if $0.floatingTabBarController == self { $0.floatingTabBarController = nil }
 				stopObserving($0)
 			}
 			
 			viewControllers.forEach {
-				$0.loadViewIfNeeded()
 				addChild($0)
 				$0.floatingTabBarController = self
 				observe($0)
 			}
 			
 			updateTabBar()
-			collectionView.reloadData()
+			updateControllers()
 			updateBarItems(animated: false)
 		}
 	}
@@ -43,28 +41,15 @@ open class FloatingTabBarController: UIViewController {
 	open var initialIndex = 0
 	
 	open var progress: CGFloat {
-		guard collectionView.frame.width != 0 else { return 0 }
-		return collectionView.contentOffset.x / collectionView.frame.width
+		scrollView.frame.width == 0 ? 0 : scrollView.contentOffset.x / scrollView.frame.width
 	}
 	
-	open var currentIndex: Int {
-		return Int(round(progress))
-	}
+	open var currentIndex: Int { Int(round(progress)) }
 	
-	open var currentViewController: UIViewController {
-		return viewControllers[currentIndex]
-	}
+	open var currentViewController: UIViewController { viewControllers[currentIndex] }
 	
-	public let collectionView: UICollectionView = {
-		let flowLayout = UICollectionViewFlowLayout()
-		flowLayout.scrollDirection = .horizontal
-		let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
-		return collectionView
-	}()
-	
-	var collectionViewLayout: UICollectionViewLayout {
-		return collectionView.collectionViewLayout
-	}
+	public let scrollView = UIScrollView()
+	private let stackView = UIStackView()
 	
 	var observers: [UIViewController: NSKeyValueObservation] = [:]
 	
@@ -77,26 +62,37 @@ open class FloatingTabBarController: UIViewController {
 	open override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		configureCollectionView()
+		configureScrollView()
+		configureStackView()
 		configureTabBar()
+		updateControllers()
 		
 		updateBarItems(animated: false)
 	}
 	
-	func configureCollectionView() {
-		collectionView.isPagingEnabled = true
-		collectionView.showsHorizontalScrollIndicator = false
-		collectionView.register(ViewControllerCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-		collectionView.translatesAutoresizingMaskIntoConstraints = false
-		collectionView.contentInsetAdjustmentBehavior = .never
-		view.addSubview(collectionView)
-		collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-		collectionView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-		collectionView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-		collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+	func configureScrollView() {
+		scrollView.isPagingEnabled = true
+		scrollView.showsHorizontalScrollIndicator = false
+		scrollView.translatesAutoresizingMaskIntoConstraints = false
+		scrollView.contentInsetAdjustmentBehavior = .never
+		view.addSubview(scrollView)
+		scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+		scrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+		scrollView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+		scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
 		
-		collectionView.dataSource = self
-		collectionView.delegate = self
+		scrollView.delegate = self
+	}
+	
+	func configureStackView() {
+		stackView.axis = .horizontal
+		stackView.translatesAutoresizingMaskIntoConstraints = false
+		scrollView.addSubview(stackView)
+		stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true
+		stackView.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
+		stackView.rightAnchor.constraint(equalTo: scrollView.rightAnchor).isActive = true
+		stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
+		stackView.heightAnchor.constraint(equalTo: scrollView.heightAnchor).isActive = true
 	}
 	
 	var tabBarBottomConstraint: NSLayoutConstraint!
@@ -111,18 +107,26 @@ open class FloatingTabBarController: UIViewController {
 		tabBarBottomConstraint.isActive = true
 	}
 	
+	func updateControllers() {
+		while let first = stackView.arrangedSubviews.first {
+			first.removeFromSuperview()
+		}
+		viewControllers.forEach {
+			$0.loadViewIfNeeded()
+			stackView.addArrangedSubview($0.view)
+			$0.view.translatesAutoresizingMaskIntoConstraints = false
+			$0.view.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
+		}
+	}
+	
 	var viewsLaidout = false
 	open override func viewDidLayoutSubviews() {
 		super.viewDidLayoutSubviews()
 		
-		configureLayout()
 		updateContentInsets()
 		
 		if !viewsLaidout {
 			viewsLaidout = true
-			collectionView.reloadData()
-			
-			_ = collectionView.collectionViewLayout.collectionViewContentSize
 			scrollToViewControllerAtIndex(initialIndex, animated: false)
 		}
 	}
@@ -142,32 +146,6 @@ open class FloatingTabBarController: UIViewController {
 			tabBarBottomConstraint.constant = 0
 		}
 		view.layoutIfNeeded()
-	}
-	
-	var lastSize: CGSize = .zero
-	func configureLayout() {
-		guard let layout = collectionViewLayout as? UICollectionViewFlowLayout else {
-			fatalError("Invalid collection view layout")
-		}
-		
-		let verticalInset = collectionView.adjustedContentInset.top + collectionView.adjustedContentInset.bottom
-		
-		let bounds = view.bounds
-		let itemSize = CGSize(width: bounds.width, height: bounds.height - verticalInset)
-		
-		guard itemSize != lastSize else { return }
-		lastSize = itemSize
-		
-		layout.itemSize = itemSize
-		layout.estimatedItemSize = itemSize
-		
-		layout.minimumInteritemSpacing = 0
-		layout.minimumLineSpacing = 0
-		layout.sectionInset = .zero
-		
-		collectionView.layoutSubviews()
-		
-		viewControllers.forEach { $0.view.layoutSubviews() }
 	}
 	
 	open func updateBarItems(animated: Bool) {
@@ -194,7 +172,7 @@ open class FloatingTabBarController: UIViewController {
 	
 	open func scrollToViewControllerAtIndex(_ index: Int, animated: Bool) {
 		if index >= 0 && index <= viewControllers.count - 1 {
-			collectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: animated)
+			scrollView.setContentOffset(CGPoint(x: scrollView.frame.width * CGFloat(index), y: 0), animated: animated)
 		}
 	}
 	
@@ -212,29 +190,7 @@ open class FloatingTabBarController: UIViewController {
 	
 }
 
-extension FloatingTabBarController: UICollectionViewDataSource {
-	
-	open func numberOfSections(in collectionView: UICollectionView) -> Int {
-		return viewsLaidout ? 1 : 0
-	}
-	
-	open func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return viewControllers.count
-	}
-	
-	open func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? ViewControllerCollectionViewCell else {
-			fatalError("Cell \(reuseIdentifier) not setup")
-		}
-		
-		cell.viewController = viewControllers[indexPath.item]
-		
-		return cell
-	}
-	
-}
-
-extension FloatingTabBarController: UICollectionViewDelegate {
+extension FloatingTabBarController: UIScrollViewDelegate {
 	open func scrollViewDidScroll(_ scrollView: UIScrollView) {
 		tabBar.position = progress
 		updateBarItems(animated: false)
